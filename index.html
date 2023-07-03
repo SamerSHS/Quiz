@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&family=Readex+Pro:wght@500&family=Tajawal&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href= "styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id= "container">
+
+       <div id="start">إبدأ</div>    
+
+
+       <div id="guide">
+         <h2>تعليمات المسابقة</h2>
+         <h4> 1- لديك 20 ثانية لكل سؤال</h4>
+         <h4> 2- لا يمكنك التراجع بعد اختيار الجواب</h4> 
+         <h4> 3- ستحصل على نقطة عند الإجابة الصحيحة</h4> 
+         <h4> 4- لا يمكنك الخروج من المسابقة إذا بدأت بها</h4>
+          <div id="button">
+           <button id="continue">المتابعة</button>
+           <button id="exit">الخروج</button>
+          </div>
+        </div>
+
+
+          <div id="quiz">
+              <div id="quiz_header">
+                  <h5>المسابقة</h5>
+                  <div id="timer">
+                      <h6>الوقت المتبقي</h6>    
+                      <h6 id="time">00</h6>
+                  </div>
+                </div>
+
+
+
+
+             
+            <div id="question">
+                <h2 id="questionNo"> </h2>
+                <h2 id="questionText"> </h2>
+            </div>
+
+
+            <div id="optionList">
+                <h4 class="choice_que" id="option1"></h4>
+                <h4 class="choice_que" id="option2"></h4>
+                <h4 class="choice_que" id="option3"></h4>
+                <h4 class="choice_que" id="option4"></h4>
+            </div>
+
+
+
+                    <div id="answersSection"> 
+                <h3 id="total_correct">3 من 10 أسئلة</h3>
+                <h3 id="next_question">التالي</h3>
+                <div id="progressBar">
+                    <div id="progressBarFull"></div>    
+                </div>
+            </div>          
+           </div>
+           <div id="result">
+           <!--<i class="fas fa-trophy"></i>--> 
+           <img src="3796.jpg" >
+            <h6> انتهت المسابقة</h6>
+            <h6 id="points"></h6>
+            <button id="quit">خروج</button>
+            <button id="startAgain">إبدأ مرة أخرى</button>
+           
+              
+                </div>
+        </div>  
+    <script src="js/questions.js"></script>  
+    <script src="script.js"></script>
+    
+    
+</body>
+</html>

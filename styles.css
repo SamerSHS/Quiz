@@ -1,0 +1,413 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: hsl(205, 78%, 60%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Exo', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: hsl(209, 61%, 16%);
+    direction: rtl;
+}
+
+#container {
+    height: auto;
+    width: auto;
+}
+
+/*Start Section*/
+#start {
+    height: 400px;
+    width: 500px;
+   text-align: center;
+    padding: 150px 0px;
+    background: #e7f1fa;
+    color: hsl(209, 61%, 16%);
+    font-size: 8rem;
+    font-weight: 700;
+    border-radius: 30px 10px;
+    border: 1px solid #b0c4d8;
+    cursor: pointer;
+/*    display: none;*/
+}
+
+#start:hover {
+    background: hsl(88, 100%, 40%);;
+   /*color: #e7f1fa;*/
+}
+
+/*guide Section*/
+#guide,
+#quiz {
+    height: auto;
+    width: 1000px;
+    padding: 20px;
+    background: #fcf5bd;
+    border-radius: 30px 30px 30px 30px;
+    border: 1px solid #b0c4d8;
+    display: none;
+    
+}
+
+#guide h2 {
+    font-size: 5rem;
+    color: hsl(88, 100%, 40%);;
+}
+
+#guide h4 {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    margin-top: 2rem;
+    color: hsl(209, 61%, 16%);
+    
+}
+
+#guide #button {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 2rem 0 0 2rem;
+
+    
+}
+
+#guide #button button {
+    height: 50px;
+    width: 120px;
+    margin: 10px 25px;
+    border: none;
+    outline: none;
+    color: #e7f1fa;
+    background: hsl(88, 100%, 40%);;
+    border: 1px solid #b0c4d8;
+    border-radius: 25px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#guide #button button:last-child {
+    margin: 10px 0;
+}
+
+#guide #button button:hover {
+    background: hsl(209, 61%, 16%);
+}
+
+#quiz {
+    /*    display: block;*/
+    height: 600px;
+    position: relative;
+}
+
+#quiz #quiz_header {
+    height: 60px;
+    width: 100%;
+    background: hsl(88, 100%, 40%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    border-radius:  30px 30px 0px 0px;
+}
+
+#quiz #quiz_header h5 {
+    font-size: 3rem;
+    
+    color: #ffffff;
+}
+
+#quiz #quiz_header #timer {
+    height: 50px;
+    width: 200px;
+    background: hsl(88, 100%, 40%);;
+    color: #e7f1fa;
+    /*border: 1px solid #b0c4d8;*/
+    font-size: 18px;
+    border-radius: 20px 20px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 10px;
+}
+
+#quiz #quiz_header #timer h6 {
+    font-size: 22px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    margin: 0 10px;
+}
+
+#quiz #quiz_header #timer #time {
+    height: 44px;
+    width: 50px;
+    background: #fff;
+    color: #520c0d;
+    border: 1px solid #b0c4d8;
+    border-radius: 15px 7px;
+    margin: 2px 0 0 27px;
+}
+
+/*Quiz Questions*/
+#quiz #question {
+    position: absolute;
+    top: 90px;
+    display: flex;
+    flex-direction: row;
+}
+
+#quiz #question h2 {
+    font-size: 3rem;
+}
+
+#quiz #question h2:first-child {
+    margin: 0 10px 0 5px;
+}
+
+/*Quiz Options*/
+#quiz #optionList {
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 160px 100px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    
+    
+ 
+   
+}
+
+#quiz #optionList h4 {
+    height: auto;
+    background: hsl(88, 100%, 40%);;
+    line-height: 50px;
+    margin: 2rem 2rem;
+    border-radius: 7px;
+    padding: 0.8rem;
+    font-size: 20px;
+    color: rgb(15, 10, 10);
+    overflow: hidden;
+    border: 1px solid #b0c4d8;
+    cursor: pointer;
+    font-size: 2rem;
+    
+
+}
+
+#quiz #optionList h4:hover {
+    background: hsl(209, 40%, 16%);
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+
+#quiz #optionList .active {
+    background: hsl(209, 61%, 16%);
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+
+#quiz #optionList .disabled {
+    pointer-events: none;
+}
+
+/*Answers Section*/
+
+#quiz #answersSection {
+    height: 60px;
+    width: 100%;
+    background: hsl(88, 100%, 40%);
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 0px 0px 30px 30px;
+}
+
+#quiz #answersSection h3 {
+    margin-right: 0px 30px;
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+#quiz #answersSection #next_question {
+    height: 40px;
+    width: 100px;
+    display: grid;
+    place-items: center;
+    background: hsl(209, 61%, 16%);
+    position: absolute;
+    right: 0;
+    color: #fff;
+    border: 1px solid #b0c4d8;
+    font-size: 18px;
+    border-radius: 20px 20px 20px 20px;
+    cursor: pointer;
+    margin: 0 20px;
+    /*transition: transform 2s ease;
+    transform: scale(1);*/
+}
+
+/*#quiz #answersSection h3:hover {
+    background: hsl(209, 61%, 16%);
+   /* */
+
+
+#quiz #answersSection h3:first-child:hover {
+    background: none;
+}
+
+/*Result Section*/
+#result {
+    height: 500px;
+    width: 450px;
+    padding: 20px;
+    background: #fcf5bd;
+    border-radius: 30px 10px;
+    border: 1px solid #b0c4d8;
+    overflow: hidden;
+    position: relative;
+    display: none;
+    
+}
+
+#container #result img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 25px;
+    border:  1px solid hsl(209, 61%, 16%) ;
+    box-shadow: 3px 3px 2px 2px #888888 ;
+    position: absolute;
+    right: 150px;
+    display: none;
+    
+}
+
+#container #result h6 {
+    height: 5rem;
+    width: 87%;
+    font-size: 3rem;
+    position: absolute;
+    text-align: center;
+    top: 210px
+}
+
+#container #result #points {
+    font-size: 30px;
+    top: 275px;
+}
+
+#container #result button {
+    height: 60px;
+    width: 260px;
+    border: none;
+    outline: none;
+    background: hsl(209, 61%, 16%);;
+    color: #e7f1fa;
+    position: absolute;
+    left: 105px;
+    top: 335px;
+    border: 1px solid #b0c4d8;
+    border-radius: 20px 5px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#container #result button:last-child {
+    top: 405px;
+}
+
+#container #result button:hover {
+    background: hsl(9, 83%, 44%);
+}
+
+
+#progressBar {
+
+    width: 20rem;
+    height: 1rem;
+    border: 0.2rem solid hsl(209, 61%, 16%);
+    overflow: hidden;
+    border-radius: 50px;
+
+}
+#progressBarFull {
+    height: 100%;
+    width: 0%;
+    background: hsl(209, 61%, 16%);
+}
+
+
+  
